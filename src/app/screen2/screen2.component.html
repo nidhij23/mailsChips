@@ -1,0 +1,71 @@
+<div class="container">
+
+  <md-card class="main">
+
+    <md-card-header>
+      <a href="#">
+        <span class="glyphicon glyphicon-circle-arrow-left"></span>
+      </a>
+      <label>New Message</label></md-card-header>
+    <form #form="ngForm">
+      <md-card>
+        <div class="row"><h6>Recipients:</h6>
+          <div class="chip col-lg-1" *ngFor="let rec of recipients">
+            {{rec}}
+            <a (click)="delete(rec)"> <span class="glyphicon glyphicon-remove"></span> </a>
+          </div>
+        </div><br>
+        <div class="row">
+        <label>To:</label>
+        <input type="text" name="email" [(ngModel)]="to" (keyup.enter)="add_recipient(to,email)"(focusout)="add_recipient(to,email)" [value]="searchValue" required></div>
+        <!-- <button class="btn" (click)="add_recipient(to)" >Add</button>-->
+
+
+        <!--    <div class="section">          
+		<tag-input placeholder="{{placeholder_recipient}}"  [ngModel]="['John Poots']" #tag>
+          </tag-input>
+		</div>-->
+      </md-card>
+      <md-card>
+        <label>Subject:</label><br>
+        <input type="text" placeholder="{{placeholder_subject}}" name="subject" [(ngModel)]="subject"required>
+        <a>Add pre-defined text</a>
+      </md-card>
+
+
+
+      <!--  <md-card>
+        <!--<accordion>
+        <accordion-group heading="REFERENCES(Optional)">
+          <button class=" btn btn-default"> Button 1</button>
+          <button class="btn btn-default">Button 2</button>
+        </accordion-group>
+      </accordion>
+        <label>REFERENCES(Optional)</label>
+        <select>
+        <option *ngFor="let reference of references" >{{reference}}</option>
+        
+      </select>
+      </md-card>
+
+
+      <md-card>
+        <label>Classification</label>
+        <select>
+        <option *ngFor="let class of classification">{{class}}</option>
+        
+      </select>
+      </md-card>
+-->
+
+
+      <md-card>
+        <button class=" btn " type="submit" (click)="printdata(form,subject)" [disabled]="!form.valid"> Submit</button>
+        <button class=" btn " type="reset" (click)="resetform(form)"> Clear</button>
+      </md-card>
+
+    </form>
+  </md-card>
+
+
+</div>

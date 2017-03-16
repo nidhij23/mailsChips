@@ -1,0 +1,57 @@
+.card{
+    background-color: #FEFDFD;
+    border:1px solid #D5D2D2;
+
+}
+md-card{
+    margin:1%;
+}
+
+label{
+    font-size:18px;
+}
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    
+    padding:2%;
+}
+a{
+    font-size: 16px;
+}
+select{
+    height:30px;
+    font-size: 15px;    
+    width:300px;
+}
+md-card-header{
+     background-color: #D5D2D2;
+     height:50px;
+     line-height: 50px;
+}
+.main{
+    padding-top:1%;
+}
+.glyphicon{
+    color:black;
+    margin:5%;
+    margin-right: 5px;
+}
+tag-input{
+    font-size: 15px;
+    
+}
+input{
+    font-size: 15px;
+    width:400px;
+    height:30px;
+}
+.chip{
+    background-color: #E5E1E1;
+    height:40px;
+    width:150px;
+    margin:2px;
+    border-radius:5%;
+    border:1px solid #E1DCDC;
+    font-size: 15px;
+    margin-bottom:0px;
+}
